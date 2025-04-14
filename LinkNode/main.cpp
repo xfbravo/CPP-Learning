@@ -29,11 +29,12 @@ void insertNode(Node *head, int val, int pos)
             return;
         }
     }
+    // 如果当前节点的下一个节点为空，说明要插入的位置在链表的末尾
     if (current->next == NULL)
     {
         current->next = newNode;
     }
-    else
+    else // 如果当前节点的下一个节点不为空，说明要插入的位置在链表的中间
     {
         newNode->next = current->next;
         current->next = newNode;
