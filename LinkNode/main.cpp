@@ -9,7 +9,7 @@ public:
     Node *next;
     Node(int val) : data(val), next(NULL) {}
 } *LinkNode;
-void insertNode(Node *head, int val, int pos)
+void insertNode(LinkNode head, int val, int pos)
 {
     Node *newNode = new Node(val);
     if (pos == 0)
@@ -41,7 +41,7 @@ void insertNode(Node *head, int val, int pos)
     }
 }
 
-void deleteNodeByPos(Node *head, int pos)
+void deleteNodeByPos(LinkNode head, int pos)
 {
     Node *current = head;
     // current初始化指向头节点，current->next表示要删除的节点
@@ -67,7 +67,7 @@ void deleteNodeByPos(Node *head, int pos)
     delete temp; // 释放内存
 }
 
-void clearNodelist(Node *head)
+void clearNodelist(LinkNode head)
 {
     LinkNode current = head;
     while (current != NULL)
@@ -89,8 +89,9 @@ int main()
     second->next = third;
     insertNode(head, 4, 2);   // Insert 4 at position 2
     insertNode(head, 5, 0);   // Insert 5 at position 0
-    deleteNodeByPos(head, 5); // Delete node at position 2
-    Node *current = head;
+    deleteNodeByPos(head, 4); // Delete node at position 2
+    //head->5->1->2->4->NULL
+    Node *current = head->next;
     while (current->next != NULL)
     {
         cout << current->data << "->";
