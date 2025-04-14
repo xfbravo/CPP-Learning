@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <set>
 #include <vector>
+#include<fstream>
 using namespace std;
 
 int main()
@@ -50,5 +51,15 @@ int main()
     {
         cout << "10 not found" << endl;
     }
+    ofstream ofobject("test.txt", ios_base::out);
+    if (!ofobject.is_open())
+    {
+        cerr << "Failed to open file" << endl;
+        return 1;
+    }
+    double d1=0.5;
+    double d2=0.6;
+    ofobject << d1 << " " << d2 << endl;
+    ofobject.close();
     return 0;
 }
