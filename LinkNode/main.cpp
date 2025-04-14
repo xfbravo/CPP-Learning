@@ -2,13 +2,13 @@
 
 using namespace std;
 
-class Node
+typedef class Node
 {
 public:
     int data;
     Node *next;
     Node(int val) : data(val), next(NULL) {}
-};
+} *LinkNode;
 void insertNode(Node *head, int val, int pos)
 {
     Node *newNode = new Node(val);
@@ -68,7 +68,7 @@ void deleteNodeByPos(Node *head, int pos)
 
 void clearNodelist(Node *head)
 {
-    Node *current = head;
+    LinkNode current = head;
     while (current != NULL)
     {
         Node *temp = current;
@@ -79,10 +79,10 @@ void clearNodelist(Node *head)
 
 int main()
 {
-    Node *head = new Node(0); // Dummy head node
-    Node *first = new Node(1);
-    Node *second = new Node(2);
-    Node *third = new Node(3);
+    LinkNode head = new Node(0); // Dummy head node
+    LinkNode first = new Node(1);
+    LinkNode second = new Node(2);
+    LinkNode third = new Node(3);
     head->next = first;
     first->next = second;
     second->next = third;
