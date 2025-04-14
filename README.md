@@ -1,2 +1,3 @@
 # CPP Learning
-C++ projects
+
+Projects learning C++ with the foundation of C
