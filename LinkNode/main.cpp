@@ -89,7 +89,7 @@ int main()
     insertNode(head, 4, 2);   // Insert 4 at position 2
     insertNode(head, 5, 0);   // Insert 5 at position 0
     deleteNodeByPos(head, 4); // Delete node at position 2
-    //head->5->1->2->4->NULL
+    // head->5->1->2->4->NULL
     Node *current = head->next;
     while (current->next != NULL)
     {
