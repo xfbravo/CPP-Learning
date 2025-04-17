@@ -1,5 +1,5 @@
 #include <iostream>
-#include "mergeSort.h" // Include the header file for merge sort
+#include "HeapSort.h" // Include the header file for heap sort
 using namespace std;
 
 int main()
@@ -12,12 +12,12 @@ int main()
         cout << arr[i] << " "; // Print original array
     }
     cout << endl;
-    mergeSort(arr, 0, size - 1); // Call mergeSort function
+    HeapSort(arr, size); // Call HeapSort function
     cout << "Sorted array: ";
     for (int i = 0; i < size; i++)
     {
         cout << arr[i] << " "; // Print sorted array
     }
     cout << endl;
-    return 0;
+    return 0; // Return 0 to indicate successful execution
 }
