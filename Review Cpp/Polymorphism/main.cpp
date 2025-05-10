@@ -62,7 +62,7 @@ using namespace std;
 //     Dog d;
 //     Cat c;
 //     makeSound(d); // Calls Dog::speak()
-//     makeSound(c); // Calls Cat::speak()
+//     makeSound(c); // Calls Cat::speak()什么
 //     return 0;
 // }
 
